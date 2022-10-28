@@ -12,9 +12,7 @@ body{
     flex-direction: column;
     height: 22vh;
     width: auto;
-    padding: 1em;
     margin: 1em;
-    justify-content: space-between;
 }
 .player-one{
     border: 2px solid cyan;
@@ -24,12 +22,9 @@ body{
     border: 2px solid red;
     order: 3;
 }
-.card{
-    margin: 5px;
-}
 .card-zone{
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
 }
 .command{
     border: 2px solid rgb(255, 0, 221);
@@ -41,7 +36,7 @@ body{
     height: 100px;
     width: 100px;
 }
-.player-information{
+.game-information{
     display: flex;
     border: 2px solid rgb(255, 0, 212);
     height: 30vh;
@@ -57,5 +52,24 @@ body{
     border: 2px solid peru;
     color: aliceblue;
     order: 2;
-    padding: 1em;
+    padding: 10px;
+}
+.player-info{
+    color: aliceblue;
+    display: flex;
+   flex-flow: column wrap-reverse;
+   height: 120px;
+}
+.hand{
+    color: aliceblue;
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.game-history{
+    border: 2px solid black;
+    color: aliceblue;
+    padding-left: 5px;
+    padding-right: 5px;
+    order: 2;
 }
