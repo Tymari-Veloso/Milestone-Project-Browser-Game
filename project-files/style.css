@@ -1,3 +1,54 @@
-*{
-    border: 2px solid black
+body{
+    background-color: rgb(50, 49, 49);
+}
+.game-board{
+    display: flex;
+    border: 5px solid whitesmoke;
+    flex-direction: column-reverse;
+    padding: 1em;
+}
+.board{
+    display: flex;
+    flex-direction: column;
+    height: 22vh;
+    width: auto;
+    padding: 1em;
+    margin: 1em;
+}
+.player-one{
+    border: 2px solid cyan;
+    order: 1;
+}
+.player-two{
+    border: 2px solid red;
+    order: 3;
+}
+.card{
+    margin: 5px;
+}
+.command{
+    border: 2px solid rgb(255, 0, 221);
+    height: 100px;
+    width: 100px;
+}
+.unit{
+    border: 2px solid rgb(0, 255, 0);
+    height: 100px;
+    width: 100px;
+}
+.player-information{
+    display: flex;
+    border: 2px solid rgb(255, 0, 212);
+    margin-top: 1em;
+    justify-content: space-between;
+}
+.icon{
+    height: 100px;
+    width: 100px;
+    margin: 1em;
+}
+.prompts{
+    border: 2px solid peru;
+    color: aliceblue;
+    order: 2;
 }
