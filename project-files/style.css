@@ -13,6 +13,7 @@ body{
     height: 22vh;
     width: auto;
     margin: 1em;
+    background-color: rgb(69, 50, 27);
 }
 .player-one{
     border: 2px solid cyan;
@@ -20,11 +21,12 @@ body{
 }
 .player-two{
     border: 2px solid red;
-    order: 3;
+    order: 5;
 }
 .card-zone{
     display: flex;
     justify-content: space-around;
+    margin: 1em;
 }
 .command{
     border: 2px solid rgb(255, 0, 221);
@@ -48,28 +50,41 @@ body{
     width: 100px;
     margin: 1em;
 }
-.prompts{
-    border: 2px solid peru;
+.commentary{
+    text-align: center;
+    border: 2px solid orange;
     color: aliceblue;
-    order: 2;
-    padding: 10px;
+    padding: 0px 10px;
+    margin: 20px 0px;
+    order: 3;
+    width: 500px;
 }
-.player-info{
+.player-info-box{
     color: aliceblue;
     display: flex;
    flex-flow: column wrap-reverse;
    height: 120px;
+   width: 200px;
+   justify-content: center;
+   align-content: center;
+   margin: 1em;
+}
+.player-info{
+    margin: 15px;
 }
 .hand{
+    text-align: center;
     color: aliceblue;
-    display: flex;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0px 10px;
+    margin: 20px 0px;
+    width: 300px;
 }
 .game-history{
-    border: 2px solid black;
+    text-align: center;
+    border: 2px solid yellow;
     color: aliceblue;
-    padding-left: 5px;
-    padding-right: 5px;
-    order: 2;
+    padding: 0px 10px;
+    margin: 20px 0px;
+    order: 4;
+    width: 300px;
 }
