@@ -51,6 +51,15 @@ body{
     margin-top: 1em;
     border: 2px solid rgb(255, 0, 212);
 }
+.actions{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: 1em;
+}
+.btn{
+    height: 50px;
+}
 .icon{
     height: 100px;
     width: 100px;
@@ -68,11 +77,11 @@ body{
 .player-info-box{
     align-content: center;
     display: flex;
-    flex-flow: column wrap-reverse;
     justify-content: center;
     height: 120px;
     width: 200px;
-    margin: 1em;
+    padding: 0px 10px;
+    margin: 20px 0px;
     color: aliceblue;
 }
 .hand{
