@@ -1,18 +1,19 @@
-class Card {
-    constructor(name, cost, cardType){
+class Card{
+    constructor(name, src){
         this.name = name;
-        this.cost = cost;
-        this.cardType = cardType
+        this.src = src;
     }
 }
 class Unit extends Card{
-    constructor(power, defense){
-    this.power = power;
-    this.defense = defense;
+    constructor(name, power, defense, src){
+        super(name, src)
+        this.power = power
+        this.defense = defense
     }
 }
 class Command extends Card{
-    constructor(commandType){
+    constructor(name, commandType, src){
+        super(name, src)
         this.commandType = commandType
     }
 }
