@@ -100,3 +100,16 @@ body{
     color: aliceblue;
     border: 2px solid yellow;
 }
+.popup{
+    display: none;
+    flex-flow: column;
+    align-items: center;
+}
+.popup-choice{
+    display: none;
+    flex-flow: column;
+    align-items: center;
+}
+.pop-up-btn{
+    
+}

@@ -11,4 +11,4 @@ let cardLibrary = [
     lion,
     squirrel
 ]
-console.log(cardLibrary)
+//array built using Card constructor

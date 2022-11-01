@@ -9,6 +9,7 @@
     <script src="./buildCard.js"></script>
     <script src="./card-library.js"></script>
     <script src="./game-flow.js"></script>
+    <script src="./buildDeck.js"></script>
 </head>
 <body>
     <div class="game-board">
@@ -37,14 +38,24 @@
             </article>
         </section>
     </div>
+    <div id="popup-message"></div>
+    <div class="popup" id="coin-flip-popup">
+        <img src="/card-images/cat.jpg" alt="" style="height: 200px; width: 200px;">
+            <button class="coin-flip-pop-up-btn" onclick="coinFlip(1)">Heads</button>
+            <button class="coin-flip-pop-up-btn" onclick="coinFlip(2)">Tails</button>
+    </div>
+    <div class="popup-choice" id="choice-popup">
+        <button class="choice-pop-up-btn" onclick="decideFirst()">Go First</button>
+        <button class="choice-pop-up-btn" onclick="decideSecond()">Go Second</button>
+    </div>
     <div class="game-information">
         <img src="" alt="" class="icon player-one">
         <section class="player-info-box player-one">
-            <h2>
+            <h3>
             <article class="player-info">HP: 0</article>
             <article class="player-info">Hand: 0</article>
             <article class="player-info">Deck: 0</article>
-            </h2>
+            </h3>
         </section>
         <section class="player-one hand">
             <h2>Lots of cards</h2>
@@ -53,6 +64,7 @@
             </h3>
         </section>
         <section class="player-one actions">
+                <button class="btn" onclick="showCoinFlipPopup()">Start Game</button>
                 <button class="btn">Play Card</button>
                 <button class="btn">End Turn</button>
         </section>
@@ -67,11 +79,11 @@
             </h3>
         </section>
         <section class="player-info-box player-two">
-            <h2> 
+            <h3> 
                 <article class="player-info">HP: 0</article>
                 <article class="player-info">Hand: 0</article>
                 <article class="player-info">Deck: 0</article>
-            </h2>
+            </h3>
         </section>
         <img src="" alt="" class="icon player-two">
     </div>

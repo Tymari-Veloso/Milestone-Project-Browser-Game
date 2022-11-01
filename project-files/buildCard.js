@@ -17,3 +17,4 @@ class Command extends Card{
         this.commandType = commandType
     }
 }
+//Object builder for cards 
