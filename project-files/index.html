@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milestone Project Browser Game</title>
     <link rel="stylesheet" href="./style.css" type="text/css">
-    <script src="./buildCard.js"></script>
-    <script src="./card-library.js"></script>
-    <script src="./game-flow.js"></script>
-    <script src="./buildDeck.js"></script>
 </head>
 <body>
     <div class="game-board">
@@ -38,15 +34,13 @@
             </article>
         </section>
     </div>
-    <div id="popup-message"></div>
-    <div class="popup" id="coin-flip-popup">
-        <img src="/card-images/cat.jpg" alt="" style="height: 200px; width: 200px;">
-            <button class="coin-flip-pop-up-btn" onclick="coinFlip(1)">Heads</button>
-            <button class="coin-flip-pop-up-btn" onclick="coinFlip(2)">Tails</button>
-    </div>
-    <div class="popup-choice" id="choice-popup">
-        <button class="choice-pop-up-btn" onclick="decideFirst()">Go First</button>
-        <button class="choice-pop-up-btn" onclick="decideSecond()">Go Second</button>
+    <div class="popup" id="popup-menu">
+        <img id="coin-flip-img" src="/card-images/coin-flip.jpg" alt="picture of a coin flip" style="height: 200px; Width: 200px">
+        <p class="message-popup" id="popup-message">Hello</p>
+        <button class="coin-btn" onclick="coinFlip(1)">Heads</button>
+        <button class="coin-btn" onclick="coinFlip(2)">Tails</button>
+        <button class="choose-btn" onclick="playerChoice(1)">Go First</button>
+        <button class="choose-btn" onclick="playerChoice(2)">Go Second</button>
     </div>
     <div class="game-information">
         <img src="" alt="" class="icon player-one">
@@ -64,13 +58,14 @@
             </h3>
         </section>
         <section class="player-one actions">
-                <button class="btn" onclick="showCoinFlipPopup()">Start Game</button>
-                <button class="btn">Play Card</button>
-                <button class="btn">End Turn</button>
+                <button class="start-btn btn" id="game-start-btn" onclick="showCoinFlipPopup()">Start Game</button>
+                <button class="play-card-btn btn">Play Card</button>
+                <button class="end-turn-btn btn">End Turn</button>
+                <button class="build-deck-btn " id="build-btn">Build deck</button>
         </section>
         <section class="commentary">
-            <h2>Lots of commentary</h2>
-            <h3>Commentary</h3>
+            <h2 id="player-turn"></h2>
+            <h3 id="player-turn-info"></h3>
         </section>
         <section class="game-history">
             <h2>Lots of history</h2>
@@ -87,5 +82,9 @@
         </section>
         <img src="" alt="" class="icon player-two">
     </div>
+    <script src="./buildCard.js"></script>
+    <script src="./card-library.js"></script>
+    <script src="./buildDeck.js"></script>
+    <script src="./game-flow.js"></script>
 </body>
 </html>

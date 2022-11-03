@@ -102,14 +102,29 @@ body{
 }
 .popup{
     display: none;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
 }
-.popup-choice{
+.coin-btn{
     display: none;
-    flex-flow: column;
-    align-items: center;
 }
-.pop-up-btn{
-    
+.choose-btn{
+    display: none;
+}
+.start-btn{
+    display: block;
+}
+.play-card-btn{
+    display: block;
+}
+.end-turn-btn{
+    display: block;
+}
+.build-deck-btn{
+    display: block;
+}
+.message-popup{
+    color: aliceblue;
+    font-weight: bold;
+    font-size: large;
 }

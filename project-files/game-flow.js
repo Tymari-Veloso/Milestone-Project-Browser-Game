@@ -1,37 +1,52 @@
 let turnPlayer = 0; // 1 = playerOne, 2 = playerTwo
-let playerOneHp = 0; //update after power calculation, if zero player two wins
-let playerTwoHP = 0; //update after power calculation, if zero player one wins
-let deckLimit = 10; 
-let handLimit = 3;
+let playerOneHp = 20; //update after power calculation, if zero player two wins
+let playerTwoHP = 20; //update after power calculation, if zero player one wins
+let deckLimit = 20; 
+let handLimit = 5;
 let playerOneDeck = []; //update after a card is drawn
 let playerTwoDeck = []; //update after a card is drawn
 let playerOneHand = []; // update after a card is drawn or played
 let playerTwoHand = []; // update after a card is drawn or played
-function showCoinFlipPopup(){ //decide turn player, build deck, draw cards
-        document.getElementById("coin-flip-popup").style.display = "flex" //display coinflip popup
+let coinBtn = document.getElementsByClassName("coin-btn")
+let chooseBtn = document.getElementsByClassName("choose-btn")
+let buildBtn = document.getElementById("build-btn")
+buildBtn.addEventListener('click', function(){ //build deck button
+    buildDeck(playerOneDeck)
+    buildDeck(playerTwoDeck)
+    buildBtn.style.display = "none"
+})
+function showCoinFlipPopup(){ //display coinflip popup
+        document.getElementById("popup-menu").style.display = "flex"
+        Array.from(coinBtn).forEach(item => item.style.display = "flex")
+        document.getElementById("popup-message").innerHTML = "Choose Heads or Tails to decide if you go first or second"
+        document.getElementById("game-start-btn").style.display = "none"
 }
-function coinFlip(choice){ //playerOne chooses heads or tails, if correct, they choose firstTurn() turnPlayer value
+function coinFlip(choice){ //coin flip for player, leads to playerChoice
         let result = Math.floor(Math.random() * 2) +1;
-        let p = document.getElementById("popup-message")
         if(result === choice){
-            document.getElementById("choice-popup").style.display = "flex"
-            p.textContent = "You won the coin flip"
+            Array.from(coinBtn).forEach(item => item.style.display = "none")
+            document.getElementById("coin-flip-img").src = "/card-images/won-coin-flip.jpg"
+            document.getElementById("coin-flip-img").alt = "picture of a happy dog"
+            document.getElementById("popup-message").innerHTML = "You won the coin flip!"
+            Array.from(chooseBtn).forEach(item => item.style.display = "flex")
         }
         else{
             turnPlayer = Math.floor(Math.random() * 2) +1
-            p.textContent = "You lost the coin flip"
-
+            Array.from(coinBtn).forEach(item => item.style.display = "none")
+            document.getElementById("coin-flip-img").src = "/card-images/lost-coin-flip.jpg"
+            document.getElementById("coin-flip-img").alt = "picture of a sad cat"
+            document.getElementById("popup-message").innerHTML = "You lost the coin flip"
         }
-       console.log(document.getElementsByClassName("coin-flip-pop-up-btn")) 
 }
-function decideFirst(){
-    turnPlayer = 1
+function playerChoice(choice){ //player decides turnPlayer for firstTurn() 
+    if(choice === 1){
+        turnPlayer = 1
+    }
+    else{turnPlayer = 2}
 }
-function decideSecond(){
-    turnPlayer = 2
-}
-// function drawForGameStart(){ //each player draws cards from the deck, -x playerOne/TwoDeck
-        
+// function drawForGameStart(){ //each player draws cards from the deck
+
+// }
 // } 
 // function firstTurn(turnPlayer){
 //     function drawForTurn(turnPlayer){}
