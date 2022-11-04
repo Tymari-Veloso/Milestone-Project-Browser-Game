@@ -10,6 +10,15 @@ function shuffle(array) {
     }
     return array
 }
-function buildDeck(arr){ //arr = playerOneDeck or playerTwoDeck
-    arr.push(shuffle(cardLibrary)) //pulls cards from card library and shuffles them in random order
-}
+function buildDeck(){ //arr = playerOneDeck or playerTwoDeck
+    let newDeck1 = shuffle(cardLibrary)
+    let newDeck2 = shuffle(cardLibrary2)
+    newDeck1.forEach(element => {
+        playerOneDeck.push(element)
+    });
+    newDeck2.forEach(element => {
+      playerTwoDeck.push(element)
+  });
+  return newDeck1 , newDeck2
+}//pulls cards from card library and shuffles them in random order
+
