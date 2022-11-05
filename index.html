@@ -16,9 +16,9 @@
                 <img src="" alt="" class="command card bottom">
             </article> -->
             <article class="card-zone">
-                <img onclick="selectZone(1)" id="two-left" src="" alt="" class="unit card">
-                <img onclick="selectZone(2)" id="two-middle" src="" alt="" class="unit card">
-                <img onclick="selectZone(3)" id="two-right" src="" alt="" class="unit card">
+                <img onclick="selectZone(1)" id="two-left" src="/card-images/barn.jpg" alt="" class="unit card">
+                <img onclick="selectZone(2)" id="two-middle" src="/card-images/barn.jpg" alt="" class="unit card">
+                <img onclick="selectZone(3)" id="two-right" src="/card-images/barn.jpg" alt="" class="unit card">
             </article>
         </section>
         <section class="board player-one player-board">
@@ -28,22 +28,23 @@
                 <img src="" alt="" class="command card top">
             </article> -->
             <article class="card-zone">
-                <img onclick="selectZone(1)" id="one-left" src="" alt="" class="unit card">
-                <img onclick="selectZone(2)" id="one-middle" src="" alt="" class="unit card">
-                <img onclick="selectZone(3)" id="one-right" src="" alt="" class="unit card">
+                <img onclick="selectZone(1)" id="one-left" src="/card-images/barn.jpg" alt="" class="unit card">
+                <img onclick="selectZone(2)" id="one-middle" src="/card-images/barn.jpg" alt="" class="unit card">
+                <img onclick="selectZone(3)" id="one-right" src="/card-images/barn.jpg" alt="" class="unit card">
             </article>
         </section>
     </div>
     <div class="popup" id="popup-menu">
-        <img id="coin-flip-img" src="/card-images/coin-flip.jpg" alt="picture of a coin flip" style="height: 200px; Width: 200px">
-        <p class="message-popup" id="popup-message">Hello</p>
+        <!-- <img id="coin-flip-img" src="/card-images/coin-flip.jpg" alt="picture of a coin flip" style="height: 200px; Width: 200px"> -->
+        <p class="message-popup" id="popup-message"></p>
+        <p class="message-popup" id="error-message"></p>
         <button class="coin-btn" onclick="coinFlip(1)">Heads</button>
         <button class="coin-btn" onclick="coinFlip(2)">Tails</button>
         <button class="choose-btn" onclick="playerChoice(1)">Go First</button>
         <button class="choose-btn" onclick="playerChoice(2)">Go Second</button>
     </div>
     <div class="game-information">
-        <img src="" alt="" class="icon player-one">
+        <img src="/card-images/player-one-icon.jpg" alt="player one icon" class="icon player-one">
         <section class="player-info-box player-one">
             <h3>
             <article class="player-info" id="player-one-hp-display"></article>
@@ -59,9 +60,11 @@
         </section>
         <section class="player-one actions">
                 <button class="start-btn btn" id="game-start-btn" onclick="startGame()">Start Game</button>
-                <button onclick="playCard()" class="play-card-btn btn" id="play-btn">Play Card</button>
-                <button class="end-turn-btn btn" id="end-btn">End Turn</button>
+                <button onclick="playCards()" class="play-card-btn btn" id="play-btn">Play Cards</button>
+                <button class="end-turn-btn btn" id="end-btn" onclick="endTurn()">End Turn</button>
                 <button class="build-deck-btn btn" id="build-btn">Build deck</button>
+                <button class="btn undo-selected-btn" id="undo-btn" onclick="undoSelected()">Undo Selected</button>
+                <button class="btn restart-game-btn" id="restart-btn" onclick="restartGame()">Restart Game</button>
         </section>
         <!-- <section class="commentary">
             <h2 id="player-turn"></h2>
@@ -82,11 +85,11 @@
                 <article class="player-info"id="player-two-deck-display"></article>
             </h3>
         </section>
-        <img src="" alt="" class="icon player-two">
+        <img src="/card-images/player-two-icon.jpg" alt="player two icon" class="icon player-two">
     </div>
-    <script src="./buildCard.js"></script>
-    <script src="./card-library.js"></script>
-    <script src="./buildDeck.js"></script>
-    <script src="./game-flow.js"></script>
+    <script src="./project-files/buildCard.js"></script>
+    <script src="./project-files/card-library.js"></script>
+    <script src="./project-files/buildDeck.js"></script>
+    <script src="./project-files/game-flow.js"></script>
 </body>
 </html>

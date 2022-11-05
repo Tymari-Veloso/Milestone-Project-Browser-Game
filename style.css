@@ -120,8 +120,14 @@ body{
 .end-turn-btn{
     display: none;
 }
+.undo-selected-btn{
+    display: none;
+}
 .build-deck-btn{
     display: block;
+}
+.restart-game-btn{
+    display: none;
 }
 .message-popup{
     color: aliceblue;
