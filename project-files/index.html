@@ -9,28 +9,28 @@
 </head>
 <body>
     <div class="game-board">
-        <section class="board player-two" >
+        <section class="board player-two">
+            <!-- <article class="card-zone">
+                <img src="" alt="" class="command card bottom">
+                <img src="" alt="" class="command card bottom">
+                <img src="" alt="" class="command card bottom">
+            </article> -->
             <article class="card-zone">
-                <img src="" alt="" class="command card bottom">
-                <img src="" alt="" class="command card bottom">
-                <img src="" alt="" class="command card bottom">
-            </article>
-            <article class="card-zone">
-                <img src="" alt="" class="unit card">
-                <img src="" alt="" class="unit card">
-                <img src="" alt="" class="unit card">
+                <img onclick="selectZone(1)" id="two-left" src="" alt="" class="unit card">
+                <img onclick="selectZone(2)" id="two-middle" src="" alt="" class="unit card">
+                <img onclick="selectZone(3)" id="two-right" src="" alt="" class="unit card">
             </article>
         </section>
         <section class="board player-one player-board">
+            <!-- <article class="card-zone">
+                <img src="" alt="" class="command card top">
+                <img src="" alt="" class="command card top">
+                <img src="" alt="" class="command card top">
+            </article> -->
             <article class="card-zone">
-                <img src="" alt="" class="command card top">
-                <img src="" alt="" class="command card top">
-                <img src="" alt="" class="command card top">
-            </article>
-            <article class="card-zone">
-                <img src="" alt="" class="unit card">
-                <img src="" alt="" class="unit card">
-                <img src="" alt="" class="unit card">
+                <img onclick="selectZone(1)" id="one-left" src="" alt="" class="unit card">
+                <img onclick="selectZone(2)" id="one-middle" src="" alt="" class="unit card">
+                <img onclick="selectZone(3)" id="one-right" src="" alt="" class="unit card">
             </article>
         </section>
     </div>
@@ -46,38 +46,40 @@
         <img src="" alt="" class="icon player-one">
         <section class="player-info-box player-one">
             <h3>
-            <article class="player-info">HP: 0</article>
-            <article class="player-info">Hand: 0</article>
-            <article class="player-info">Deck: 0</article>
+            <article class="player-info" id="player-one-hp-display"></article>
+            <article class="player-info" id="player-one-hand-display"></article>
+            <article class="player-info" id="player-one-deck-display"></article>
             </h3>
         </section>
         <section class="player-one hand">
-            <h2>Lots of cards</h2>
-            <h3>
-                Cards
-            </h3>
+            <h2>Your Hand</h2>
+            <ul class="cards-in-hand" id="player-one-hand">
+                
+            </ul>
         </section>
         <section class="player-one actions">
-                <button class="start-btn btn" id="game-start-btn" onclick="showCoinFlipPopup()">Start Game</button>
-                <button class="play-card-btn btn">Play Card</button>
-                <button class="end-turn-btn btn">End Turn</button>
-                <button class="build-deck-btn " id="build-btn">Build deck</button>
+                <button class="start-btn btn" id="game-start-btn" onclick="startGame()">Start Game</button>
+                <button onclick="playCard()" class="play-card-btn btn" id="play-btn">Play Card</button>
+                <button class="end-turn-btn btn" id="end-btn">End Turn</button>
+                <button class="build-deck-btn btn" id="build-btn">Build deck</button>
         </section>
-        <section class="commentary">
+        <!-- <section class="commentary">
             <h2 id="player-turn"></h2>
             <h3 id="player-turn-info"></h3>
-        </section>
-        <section class="game-history">
-            <h2>Lots of history</h2>
-            <h3>
-                History
+            <h2 id="win-loss-score"></h2>
+            <h3 id="card-history"></h3>
+        </section> -->
+        <!-- <section class="game-history">
+            <h2>Game history</h2>
+            <h3 id="gamestate-history">
+                
             </h3>
-        </section>
+        </section> -->
         <section class="player-info-box player-two">
             <h3> 
-                <article class="player-info">HP: 0</article>
-                <article class="player-info">Hand: 0</article>
-                <article class="player-info">Deck: 0</article>
+                <article class="player-info"id="player-two-hp-display"></article>
+                <article class="player-info"id="player-two-hand-display"></article>
+                <article class="player-info"id="player-two-deck-display"></article>
             </h3>
         </section>
         <img src="" alt="" class="icon player-two">

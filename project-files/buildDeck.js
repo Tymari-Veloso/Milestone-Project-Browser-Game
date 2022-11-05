@@ -22,3 +22,9 @@ function buildDeck(){ //arr = playerOneDeck or playerTwoDeck
   return newDeck1 , newDeck2
 }//pulls cards from card library and shuffles them in random order
 
+
+// playerOneDeck.forEach(element => {
+    //     let cards = document.createElement("li")
+    //     cards.append(element.name)
+    //     playerOneHand.append(cards)
+    // });

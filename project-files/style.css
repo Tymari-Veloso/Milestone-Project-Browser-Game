@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     height: 248px;
     margin: 15px;
-    background-color: rgb(69, 50, 27);
+    background-color: rgb(24, 23, 23);
 }
 .player-board{
     flex-direction: column-reverse;
@@ -28,17 +28,17 @@ body{
     display: flex;
     justify-content: space-around;
 }
-.top{
+/* .top{
     margin-top: 15px;
 }
 .bottom{
     margin-bottom: 15px;
-}
-.command{
+} */
+/* .command{
     height: 100px;
     width: 100px;
     border: 2px solid rgb(255, 0, 221);
-}
+} */
 .unit{
     height: 100px;
     width: 100px;
@@ -91,7 +91,7 @@ body{
     margin: 20px 0px;
     color: aliceblue;
 }
-.game-history{
+/* .game-history{
     text-align: center;
     order: 4;
     width: 200px;
@@ -99,7 +99,7 @@ body{
     margin: 20px 0px;
     color: aliceblue;
     border: 2px solid yellow;
-}
+} */
 .popup{
     display: none;
     flex-direction: column;
@@ -112,13 +112,13 @@ body{
     display: none;
 }
 .start-btn{
-    display: block;
+    display: none;
 }
 .play-card-btn{
-    display: block;
+    display: none;
 }
 .end-turn-btn{
-    display: block;
+    display: none;
 }
 .build-deck-btn{
     display: block;
@@ -127,4 +127,16 @@ body{
     color: aliceblue;
     font-weight: bold;
     font-size: large;
+}
+.cards-in-hand{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+.cards{
+    display: block;
 }
