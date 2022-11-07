@@ -17,6 +17,7 @@ let buildBtn = document.getElementById("build-btn")
 let undoBtn = document.getElementById("undo-btn")
 let restartBtn = document.getElementById("restart-btn")
 let cardBtns = document.getElementsByClassName("cards")
+let endBtn = document.getElementById("end-btn")
 let playerOneHand = document.getElementById("player-one-hand")
 let playerOneHpDisplay = document.getElementById("player-one-hp-display")
 let playerOneHandDisplay = document.getElementById("player-one-hand-display")
@@ -117,15 +118,22 @@ function endTurn(){
   playerTwoCardLeft.src = playerTwoDeck[0].src
   playerTwoCardMiddle.src = playerTwoDeck[1].src
   playerTwoCardRight.src = playerTwoDeck[2].src
-  if(playerOneSelectedCards[0].power > playerTwoSelected[0].power){
+  let playerOneTotal = playerOneSelectedCards[0].power + playerOneSelectedCards[1].power + playerOneSelectedCards[2].power
+  let playerTwoTotal = playerTwoSelected[0].power + playerTwoSelected[1].power + playerTwoSelected[2].power
+  if(playerOneTotal > playerTwoTotal){
     popupMessage.innerHTML = "You win"
+    errorMessage.innerHTML = `Your power total was ${playerOneTotal - playerTwoTotal} greater than your opponent`
   }
-  else if(playerOneSelectedCards[0].power < playerTwoSelected[0].power){
+  else if(playerOneTotal < playerTwoTotal){
     popupMessage.innerHTML = "You lose"
+    errorMessage.innerHTML = `Your power total was ${playerTwoTotal - playerOneTotal} less than your opponent`
   }
   else{popupMessage.innerHTML = "It's a tie"}
-  console.log(playerTwoSelected[0].power)
   restartBtn.style.display = "block"
+  endBtn.style.display = "none"
+}
+function restartGame(){
+  location.reload()
 }
 // function selectZone(position){
 //     if(position === 1){
